@@ -1,0 +1,97 @@
+entity Asignatura(asignatura) {
+    idAsig Integer required,
+    nombreAsig String required maxlength(255)
+}
+
+entity Asocia(asocia) {
+    fecha LocalDate required
+}
+
+entity Corresponde(corresponde) {
+    esCorrecta Boolean required
+}
+
+entity Cursa(cursa) {
+}
+
+entity Estudiante(estudiante) {
+    idEst Integer required,
+    nombreEst String required maxlength(255)
+}
+
+entity Evalua(evalua) {
+    fecha LocalDate required,
+    fecha LocalDate required unique,
+    nota BigDecimal
+}
+
+entity Imparte(imparte) {
+    grupo String required maxlength(50)
+}
+
+entity Pregunta(pregunta) {
+    idPreg Integer required,
+    enunciadoPreg String required,
+    tipoPreg String required maxlength(50)
+}
+
+entity Profesor(profesor) {
+    idPro Integer required,
+    nombrePro String required maxlength(255)
+}
+
+entity Responde(responde) {
+    fecha LocalDate required
+}
+
+entity Respuesta(respuesta) {
+    idResp Integer required,
+    enunciadoResp String required
+}
+
+entity Salon(salon) {
+    idSalon Integer required,
+    capacidad Integer required
+}
+
+relationship OneToOne {
+    Evalua{idPro required} to Imparte
+    Evalua{idAsig required} to Imparte
+    Evalua{grupo required} to Imparte
+}
+
+relationship ManyToOne {
+    Asocia{idPreg required} to Pregunta
+    Asocia{idAsig required} to Asignatura
+    Corresponde{idPreg required} to Pregunta
+    Corresponde{idResp required} to Respuesta
+    Cursa{idPro required} to Imparte
+    Cursa{idAsig required} to Imparte
+    Cursa{grupo required} to Imparte
+    Cursa{idEst required} to Estudiante
+    Evalua{idPro required} to Imparte
+    Evalua{idAsig required} to Imparte
+    Evalua{grupo required} to Imparte
+    Evalua{idEst required} to Estudiante
+    Evalua{idPreg required} to Pregunta
+    Evalua{idSalon} to Salon
+    Imparte{idPro required} to Profesor
+    Imparte{idAsig required} to Asignatura
+    Responde{idPro required} to Imparte
+    Responde{idAsig required} to Imparte
+    Responde{grupo required} to Imparte
+    Responde{idEst required} to Estudiante
+    Responde{idPreg required} to Pregunta
+    Responde{idResp required} to Respuesta
+}
+
+// No views were found for which JDL is to be generated. Please review console logs
+
+// Options
+service * with serviceClass
+
+paginate * with pagination
+
+dto * with mapstruct
+
+filter *
