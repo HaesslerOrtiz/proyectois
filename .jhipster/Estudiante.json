@@ -1,0 +1,24 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "estudiante",
+  "fields": [
+    {
+      "fieldName": "idEst",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nombreEst",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Estudiante",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

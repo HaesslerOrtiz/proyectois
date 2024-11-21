@@ -1,0 +1,23 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "salon",
+  "fields": [
+    {
+      "fieldName": "idSalon",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "capacidad",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Salon",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

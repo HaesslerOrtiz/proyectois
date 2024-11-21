@@ -1,0 +1,24 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "asignatura",
+  "fields": [
+    {
+      "fieldName": "idAsig",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nombreAsig",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Asignatura",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

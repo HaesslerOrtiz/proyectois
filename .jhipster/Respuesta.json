@@ -1,0 +1,23 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "respuesta",
+  "fields": [
+    {
+      "fieldName": "idResp",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "enunciadoResp",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Respuesta",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

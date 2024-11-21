@@ -1,0 +1,41 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "cursa",
+  "fields": [],
+  "jpaMetamodelFiltering": true,
+  "name": "Cursa",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "imparte",
+      "relationshipName": "idPro",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "imparte",
+      "relationshipName": "idAsig",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "imparte",
+      "relationshipName": "grupo",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "estudiante",
+      "relationshipName": "idEst",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

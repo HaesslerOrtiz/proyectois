@@ -1,0 +1,24 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "profesor",
+  "fields": [
+    {
+      "fieldName": "idPro",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nombrePro",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "255"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Profesor",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}

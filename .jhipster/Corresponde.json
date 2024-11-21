@@ -1,0 +1,33 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "corresponde",
+  "fields": [
+    {
+      "fieldName": "esCorrecta",
+      "fieldType": "Boolean",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Corresponde",
+  "pagination": "pagination",
+  "relationships": [
+    {
+      "otherEntityName": "pregunta",
+      "relationshipName": "idPreg",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    },
+    {
+      "otherEntityName": "respuesta",
+      "relationshipName": "idResp",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one",
+      "relationshipValidateRules": "required"
+    }
+  ],
+  "service": "serviceClass"
+}

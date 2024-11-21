@@ -1,0 +1,29 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "dto": "mapstruct",
+  "entityTableName": "pregunta",
+  "fields": [
+    {
+      "fieldName": "idPreg",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "enunciadoPreg",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "tipoPreg",
+      "fieldType": "String",
+      "fieldValidateRules": ["required", "maxlength"],
+      "fieldValidateRulesMaxlength": "50"
+    }
+  ],
+  "jpaMetamodelFiltering": true,
+  "name": "Pregunta",
+  "pagination": "pagination",
+  "relationships": [],
+  "service": "serviceClass"
+}
